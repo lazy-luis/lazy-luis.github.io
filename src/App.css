@@ -1,38 +1,346 @@
-.App {
-  text-align: center;
+.home-container {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-family: 'Roboto Condensed',
+        sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 4px #acacac;
+    padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 12px 0;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    color: #00121E;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header .myBtn {
+    display: none;
+    width: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+header .myBtn button {
+    font-size: 12px;
+    color: #00121E;
+    border: 1px solid #acacac;
+    border-radius: 6px;
+    background: transparent;
+    padding: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header .myName {
+    width: 30%;
+    font-size: 2.8rem;
+    font-weight: 500;
+    font-family: 'Ubuntu',
+        sans-serif;
+    text-align: right;
+}
+
+header .myLinks {
+    width: 70%;
+    text-align: center;
+}
+
+header .myLinks a {
+    color: #00121E;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.HomePage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.HomePage .HomePage-Image {
+    width: 40%;
+}
+
+.HomePage .HomePage-Image img {
+    width: 75%;
+    display: block;
+    margin: 5px auto;
+}
+
+.HomePage .HomePage-Text {
+    width: 60%;
+    text-align: center;
+    color: #00121E;
+}
+
+.HomePage .HomePage-Text h3 {
+    font-size: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: 700;
+}
+
+.HomePage .HomePage-Text h6 {
+    font-size: 1.9rem;
+    margin: 0;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.HomePage .HomePage-Text p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 300;
+    padding: 5px 0;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Ubuntu',
+        sans-serif;
+}
+
+h4::after {
+    content: '';
+    height: 2px;
+    background: #00121E;
+    display: block;
+    width: 10%;
+    margin: 5px auto;
+}
+
+.AboutPage p {
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.Projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.Projects .ProjectBlock {
+    width: 25%;
+}
+
+.Projects .ProjectBlock .Project {
+    background: #ffffff no-repeat center;
+    background-size: cover;
+    width: 95%;
+    margin: 10px auto;
+}
+
+.Projects .ProjectBlock .Project .project_cover {
+    padding: 10px;
+    background: #010f18c2;
+    color: #d6d6d6;
+    transform: scale(0, 0);
+    opacity: 0;
+    width: 95%;
+    transition: all .4s;
+}
+
+.Projects .ProjectBlock .Project:hover .project_cover {
+    transform: scale(1, 1);
+    opacity: 1;
+    transition: all .4s;
+}
+
+.Projects .ProjectBlock .Project h5 a {
+    opacity: 1;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    text-decoration: none;
+    font-family: 'Ubuntu',
+        sans-serif;
+}
+
+.Projects .ProjectBlock .Project p {
+    opacity: 1;
+    font-size: 16px;
+    text-align: center;
+}
+
+.Projects .ProjectBlock .Project .project_tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 5px auto;
+    margin-top: 10px;
+}
+
+.Projects .ProjectBlock .Project .project_tags label {
+    font-size: 12px;
+    border-radius: 20px;
+    background: #010f18e8;
+    padding: 8px;
+    display: inline-block;
+    margin: 2px auto;
+}
+
+.SkillsPage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.SkillsPage .SkillBlock {
+    width: 25%;
+}
+
+.SkillsPage .SkillBlock .Skill {
+    width: 80%;
+    padding: 20px;
+    margin: 5px auto;
+}
+
+.SkillsPage .SkillBlock .Skill .outerSkillCircle {
+    width: 100%;
+    height: 6px;
+    background: #8198a7;
+    border-top-left-radius: 6px;
+}
+
+.SkillsPage .SkillBlock .Skill .innerSkillCircle {
+    background: #052031;
+    height: 3px;
+    border-bottom-left-radius: 6px;
+}
+
+.SkillsPage .SkillBlock .Skill .SkillText {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0%;
+    padding: 0;
+    margin-top: 5px;
+    color: #00121E;
+}
+
+.SkillsPage .SkillBlock .Skill .SkillText p {
+    margin: 0;
+}
+
+.SkillsPage .SkillBlock .Skill .SkillText p.textProgress {
+    width: 10%;
+    font-family: 'Ubuntu',
+        sans-serif;
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: 500;
+}
+
+.SkillsPage .SkillBlock .Skill .SkillText p.textDivider {
+    width: 50%;
+}
+
+.SkillsPage .SkillBlock .Skill .SkillText p.textName {
+    width: 40%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+
+    .home-container {
+        align-items: unset;
+        padding-top: 10vh;
+    }
+
+    header {
+        flex-direction: row;
+    }
+
+    header .myBtn {
+        display: block;
+        width: 10%;
+    }
+
+    header .myName {
+        width: 90%;
+        font-size: 2.2rem;
+    }
+
+    header .myLinks {
+        width: 90%;
+        display: none;
+    }
+
+    .HomePage {
+        flex-direction: column;
+    }
+
+    .HomePage .HomePage-Image {
+        width: 90%;
+    }
+
+    .HomePage .HomePage-Image img {
+        width: 90%;
+    }
+
+    .HomePage .HomePage-Text {
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .HomePage .HomePage-Text h3 {
+        font-size: 2.5rem;
+    }
+
+    .AboutPage p {
+        font-size: 1.0rem;
+        width: 90%;
+    }
+
+    .Projects {
+        flex-direction: column;
+    }
+
+    .Projects .ProjectBlock {
+        width: 95%;
+    }
+
+    .SkillsPage {
+        flex-direction: column;
+    }
+
+    .SkillsPage .SkillBlock {
+        width: 95%;
+    }
+
+    .SkillsPage .SkillBlock .Skill {
+        width: 90%;
+        padding: 20px;
+        margin: 5px auto;
+    }
+
 }
