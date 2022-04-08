@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({ btnClick }) => {
   return (
     <header>
       <div className="myBtn">
-        <button>
+        <button onClick={btnClick}>
           <FaBars />
         </button>
       </div>
