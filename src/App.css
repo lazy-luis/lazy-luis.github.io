@@ -18,7 +18,7 @@
 
 .backlayer_setout {
     z-index: 10999999;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -33,7 +33,7 @@
     z-index: 10999999;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     display: flex;
